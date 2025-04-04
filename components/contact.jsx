@@ -82,14 +82,14 @@ export default function Contact() {
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="section-title">Get In Touch</h2>
-          <div className="divider"></div>
+          <div className="contact-divider"></div>
           <p className="section-description">
             Feel free to reach out to me for any questions, opportunities, or
             just to say hello. I'll get back to you as soon as possible.
           </p>
         </div>
 
-        <div className="contact-grid">
+        <div className="contact-grid ab">
           <div>
             <div className="info-cards">
               {contactInfo.map((info, index) => (
@@ -121,6 +121,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="form-row">
                     <div className="relative">
+                      <label htmlFor="name">Enter your full name</label>
                       <Input
                         id="name"
                         name="name"
@@ -130,10 +131,10 @@ export default function Contact() {
                         required
                         disabled={isSubmitting}
                       />
-                      <label htmlFor="name">Enter your full name</label>
                     </div>
 
                     <div className="relative">
+                      <label htmlFor="email">Enter your email address</label>
                       <Input
                         id="email"
                         name="email"
@@ -144,11 +145,11 @@ export default function Contact() {
                         required
                         disabled={isSubmitting}
                       />
-                      <label htmlFor="email">Enter your email address</label>
                     </div>
                   </div>
 
                   <div className="relative">
+                    <label htmlFor="subject">What's your message about?</label>
                     <Input
                       id="subject"
                       name="subject"
@@ -158,10 +159,10 @@ export default function Contact() {
                       required
                       disabled={isSubmitting}
                     />
-                    <label htmlFor="subject">What's your message about?</label>
                   </div>
 
                   <div className="relative">
+                    <label htmlFor="message">Type your message here...</label>
                     <Textarea
                       id="message"
                       name="message"
@@ -172,7 +173,6 @@ export default function Contact() {
                       required
                       disabled={isSubmitting}
                     />
-                    <label htmlFor="message">Type your message here...</label>
                   </div>
 
                   <Button type="submit" className="w-full" disabled={isSubmitting}>
