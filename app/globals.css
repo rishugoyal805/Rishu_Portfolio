@@ -27,9 +27,18 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+    --text: #000000;
+    
+    --background-new: white;
+    --background-new1:rgb(249,250,251);
+
   }
 
   .dark {
+    --text:white;
+    --background-new:rgb(31,41,55);
+    --background-new1:rgb(17,24,39);
+    --gr-color:rgb(0, 0, 0);
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
