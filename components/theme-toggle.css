@@ -1,0 +1,30 @@
+.icon-size {
+    height: 1.25rem; /* h-5 */
+    width: 1.25rem;  /* w-5 */
+  }
+  
+  .toggle-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px; /* rounded-full */
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 150ms;
+  }
+  
+  .sun-icon,
+  .moon-icon {
+    position: absolute;
+  }
+  
+  .show {
+    transform: rotate(0deg) scale(1);
+  }
+  
+  .hide {
+    transform: rotate(90deg) scale(0);
+  }
+  
+  .transition-all {
+    transition: all 0.3s ease-in-out;
+  }
+  

@@ -1,0 +1,5 @@
+/* Home.css */
+main {
+    min-height: 100vh; /* Equivalent to Tailwind's min-h-screen */
+  }
+  
