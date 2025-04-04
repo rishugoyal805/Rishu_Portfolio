@@ -1,26 +1,25 @@
 .section.contact-section {
     padding: 4rem 0;
-    background-color: var(--gray-50);
+    background-color: var(--background-new);
   }
   
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+  .contact-divider {
+    width: 7rem;
+    height: 0.25rem;
+    margin: 0 auto 1.5rem;
+    background-color: #3b82f6;
+    /* Tailwind's primary/blue-500 */
+  }
   .section-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
-  
-  .divider {
-    width: 5rem;
-    height: 0.25rem;
-    background-color: var(--primary);
-    margin: 0 auto 1.5rem;
-  }
-  
+    
   .section-description {
     color: var(--gray-600);
     max-width: 32rem;
@@ -31,7 +30,9 @@
     display: grid;
     gap: 2rem;
   }
-  
+  .ab{
+    color:var(--text);
+  }  
   @media (min-width: 1024px) {
     .contact-grid {
       grid-template-columns: 1fr 2fr;
@@ -54,7 +55,7 @@
   }
   
   .icon-wrapper {
-    background-color: rgba(var(--primary-rgb), 0.1);
+    background-color: skyblue;
     padding: 0.75rem;
     border-radius: 9999px;
   }
@@ -62,7 +63,7 @@
   .icon {
     height: 1.5rem;
     width: 1.5rem;
-    color: var(--primary);
+    color:black
   }
   
   .info-title {
