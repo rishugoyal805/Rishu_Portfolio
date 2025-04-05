@@ -2,11 +2,12 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import Link from "next/link";
 import "./about.css";
+import { LuDownload } from "react-icons/lu"
 
 export default function About() {
   const timeline = [
     {
-      year: "2024(June-July)",
+      year: "2024 (June-July)",
       title: "Intern",
       company: "DRID",
       description:
@@ -22,26 +23,27 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-0">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-gray-300 ab">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="group">
-            <div className="relative overflow-hidden rounded-lg shadow-lg">
-              <div className="about-image-bg"></div>
+            <div className="relative w-[90%] aspect-1 overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/rishu.jpg?height=400&width=500"
+                src="/rishu.jpg"
                 alt="About Rishu Goyal"
-                className="about-image"
+                className="w-[100%] h-[90dvh] object-cover"
               />
             </div>
+
           </div>
 
+
           <div>
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2xl font-semibold mb-4 dark:text-gray-300 ab">
               I'm Rishu Goyal, a Web Developer and Software Engineer
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -53,33 +55,37 @@ export default function About() {
 
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="info-card">
-                <h4 className="font-semibold mb-1">Name:</h4>
-                <p className="text-gray-600 dark:text-gray-400">Rishu</p>
+                <h4 className="font-semibold mb-1 dark:text-gray-300 ab">Name:</h4>
+                <p className="text-gray-600 dark:text-gray-400 ema">Rishu</p>
               </div>
               <div className="info-card">
-                <h4 className="font-semibold mb-1">Email:</h4>
-                <p className="text-gray-600 dark:text-gray-400 truncate">rishugoyal16800@gmail.com</p>
+                <h4 className="font-semibold mb-1 dark:text-gray-300 ab">Email:</h4>
+                <p className="text-gray-600 dark:text-gray-400 truncate  ema">rishugoyal16800@gmail.com</p>
               </div>
               <div className="info-card">
-                <h4 className="font-semibold mb-1">Location:</h4>
-                <p className="text-gray-600 dark:text-gray-400">Noida, Uttar Pradesh, India</p>
+                <h4 className="font-semibold mb-1 dark:text-gray-300 ab">Location:</h4>
+                <p className="text-gray-600 dark:text-gray-400 ema">Noida, Uttar Pradesh, India</p>
               </div>
               <div className="info-card">
-                <h4 className="font-semibold mb-1">Availability:</h4>
-                <p className="text-gray-600 dark:text-gray-400">Open to opportunities</p>
+                <h4 className="font-semibold mb-1 dark:text-gray-300 ab ">Availability:</h4>
+                <p className="text-gray-600 dark:text-gray-400 ema" >Open to opportunities</p>
               </div>
             </div>
 
-            <Button asChild className="rounded-full shadow-md hover:shadow-lg transition-all">
-              <Link href="/RishuResume.pdf" target="_blank">
-                <FileText className="mr-2 h-4 w-4" /> Download Resume
-              </Link>
-            </Button>
+            <a
+              href="/RishuResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2 text-md font-large text-white shadow-md transition-all hover:bg-blue-700 active:scale-95 hover:shadow-lg"
+            >
+              <LuDownload className="w-4 h-4" />
+              &nbsp;Download CV
+            </a>
           </div>
         </div>
 
         <div className="mt-16">
-          <h3 className="text-2xl font-semibold mb-8 text-center">My Journey</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-center dark:text-gray-300">My Journey</h3>
           <div className="relative">
             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 transform md:translate-x-px"></div>
 
@@ -87,18 +93,17 @@ export default function About() {
               {timeline.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative flex flex-col md:flex-row ${
-                    index % 2 === 0 ? "md:flex-row-reverse" : ""
-                  }`}
+                  className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                    }`}
                 >
                   <div className="timeline-dot"></div>
 
                   <div className="ml-8 md:ml-0 md:w-1/2 md:px-8">
-                    <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                      <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm mb-2">
+                    <div className="bg-white dark:bg-gray-700 p-4 rounded-sm shadow-md hover:shadow-lg transition-shadow">
+                      <span className="inline-block bg-primary/10 rounded-full mb-2 year">
                         {item.year}
                       </span>
-                      <h4 className="text-lg font-semibold">{item.title}</h4>
+                      <h4 className="text-lg font-semibold  dark:text-gray-300 ">{item.title}</h4>
                       <p className="text-gray-600 dark:text-gray-300 font-medium">
                         {item.company}
                       </p>
