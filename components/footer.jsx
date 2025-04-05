@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
             <Link href="/" className="footer-logo">
-              Rishu<span className="text-primary">Goyal</span>
+              Rishu<span className="goyal">Goyal</span>
             </Link>
             <p className="footer-description">
               "Building digital experiences that make a real impact. Let's collaborate and bring your ideas to life."
@@ -57,6 +57,9 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="#skills" className="footer-link">Skills</Link>
+                </li>
+                <li>
+                  <Link href="#education" className="footer-link">Education</Link>
                 </li>
                 <li>
                   <Link href="#projects" className="footer-link">Projects</Link>
