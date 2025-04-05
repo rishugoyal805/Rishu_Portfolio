@@ -1,150 +1,172 @@
 .education-section {
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #000, #1f2937);
-    color: white;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .title-section {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitle {
-    font-size: 1.25rem;
-    color: #d1d5db;
-    max-width: 768px;
-    margin: 0 auto;
-  }
-  
-  .timeline {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .timeline-item {
-    position: relative;
-    padding-left: 2.5rem;
-    padding-bottom: 4rem;
-    margin-left: 1.5rem;
-  }
-  
-  .timeline-item.bordered {
-    border-left: 2px solid #374151;
-  }
-  
-  .timeline-icon {
-    position: absolute;
-    left: -1.5rem;
-    top: 0;
-    background-color: #1f2937;
-    padding: 0.5rem;
-    border-radius: 9999px;
-    border: 2px solid #6366f1;
-  }
-  
-  .icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    color: #6366f1;
-  }
-  
-  .timeline-content {
-    background-color: #1f2937;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .timeline-content:hover {
-    background-color: rgba(31, 41, 55, 0.8);
-    box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .timeline-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .degree {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #6366f1;
-  }
-  
-  .duration {
-    display: flex;
-    align-items: center;
-    color: #9ca3af;
-  }
-  
-  .calendar-icon {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.5rem;
-  }
-  
-  .field {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .institution-info {
-    margin-bottom: 1rem;
-  }
-  
-  .institution {
-    font-weight: 500;
-    color: #d1d5db;
-  }
-  
-  .location {
-    color: #9ca3af;
-  }
-  
-  .description {
-    color: #d1d5db;
-  }
-  
-  .skills-section {
-    margin-top: 4rem;
-    text-align: center;
-  }
-  
-  .skills-title {
-    font-size: 1.875rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-  }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .skill-item {
-    background-color: #1f2937;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    color: #e5e7eb;
-    transition: transform 0.2s ease;
-  }
-  
+  min-height: 100vh;
+  /* background: linear-gradient(to bottom, #000, #1f2937); */
+  color: white;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background-color: var(--background-new);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.education-divider {
+  width: 10rem;
+  height: 0.25rem;
+  margin: 0 auto 1.5rem;
+  background-color: #3b82f6;
+  /* Tailwind's primary/blue-500 */
+}
+.title-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color:var(--text);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text);
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  position: relative;
+  top: 20px;
+  padding-left: 2.5rem;
+  padding-bottom: 4rem;
+  margin-left: 1.5rem;
+}
+
+.timeline-item.bordered {
+  border-left: 2px solid #374151;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -1.38rem;
+  top: 0px;
+  /* background-color: #1f2937; */
+  background-color: var(--background-new);
+  padding: 0.55rem;
+  border-radius: 9999px;
+  border: 2px solid #6366f1;
+  margin:0px;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  /* color: white; */
+  color: var(--text);
+  padding:0px;
+  margin:4px;
+}
+
+.timeline-content {
+  background-color:var(--background-new);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  color: var(--text);
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-content:hover {
+  background-color: rgba(31, 41, 55, 0.8);
+  box-shadow: 5px 15px 25px -5px rgba(0, 0, 0, 0.7);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.degree {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  color:var(--text);
+
+}
+
+.calendar-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  color:var(--text);
+}
+
+.field {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color:var(--text);
+}
+
+.institution-info {
+  margin-bottom: 1rem;
+  color:var(--text);
+}
+
+.institution {
+  font-weight: 500;
+  /* color: #d1d5db; */
+  color:var(--text);
+}
+
+.location {
+  /* color: #9ca3af; */
+  color:var(--text);
+}
+
+.description {
+  /* color: #d1d5db; */
+  color:var(--text);
+}
+
+.skills-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-item {
+  background-color: #1f2937;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: #e5e7eb;
+  transition: transform 0.2s ease;
+}
