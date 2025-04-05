@@ -80,7 +80,7 @@ export default function Header() {
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container flex items-center justify-between">
         <Link href="/" className="brand">
-          Rishu<span className="highlight">Goyal</span>
+          Rishu<span className="goyal">Goyal</span>
         </Link>
 
         <nav className="nav-desktop">
