@@ -79,48 +79,46 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section contact-section">
-      <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Get In Touch</h2>
-          <div className="contact-divider"></div>
-          <p className="section-description">
-            Feel free to reach out to me for any questions, opportunities, or
-            just to say hello. I'll get back to you as soon as possible.
-          </p>
-        </div>
-
-        <div className="contact-grid ab">
-          <div>
-            <div className="info-cards">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="h-full">
-                  <CardContent className="info-card">
-                    <div className="icon-wrapper">
-                      <info.icon className="icon" />
-                    </div>
-                    <div>
-                      <h3 className="info-title">{info.title}</h3>
-                      <a
-                        href={info.link}
-                        className="info-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {info.details}
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+      <div className="container ct-container">
+        <div>
+          <div className="info-cards ct-info-cards">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="h-full ct-h-full">
+                <CardContent className="info-card ct-info-card">
+                  <div className="icon-wrapper ct-icon-wrapper">
+                    <info.icon className="icon ct-icon" />
+                  </div>
+                  <div>
+                    <h3 className="info-title ct-info-title">{info.title}</h3>
+                    <a
+                      href={info.link}
+                      className="info-link ct-info-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {info.details}
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-
+        </div>
+        <div className="contact-grid ct-contact-grid ab">
+          <div className="text-center ct-text-center mb-12">
+            <h2 className="section-title ct-section-title">Get In Touch</h2>
+            <div className="contact-divider"></div>
+            <p className="setion-description ct-section-description">
+              Feel free to reach out to me for any questions, opportunities, or
+              just to say hello. I'll get back to you as soon as possible.
+            </p>
+          </div>
           <div>
-            <Card className="h-full">
-              <CardContent className="form-card">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="form-row">
-                    <div className="relative">
+            <Card className="h-full ct-h-full">
+              <CardContent className="form-card ct-form-card">
+                <form onSubmit={handleSubmit} className="space-y-4 ct-space-y-4">
+                  <div className="form-row ct-form-row">
+                    <div className="relative ct-relative">
                       <label htmlFor="name">Enter your full name</label>
                       <Input
                         id="name"
@@ -133,7 +131,7 @@ export default function Contact() {
                       />
                     </div>
 
-                    <div className="relative">
+                    <div className="relative ct-relative">
                       <label htmlFor="email">Enter your email address</label>
                       <Input
                         id="email"
@@ -148,7 +146,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="relative">
+                  <div className="relative ct-relative">
                     <label htmlFor="subject">What's your message about?</label>
                     <Input
                       id="subject"
@@ -161,7 +159,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <div className="relative">
+                  <div className="relative ct-relative">
                     <label htmlFor="message">Type your message here...</label>
                     <Textarea
                       id="message"
@@ -179,7 +177,7 @@ export default function Contact() {
                     {isSubmitting ? (
                       <>
                         <svg
-                          className="spinner"
+                          className="spinner ct-spinner"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
