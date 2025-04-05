@@ -1,5 +1,4 @@
 /* Home.css */
-main {
-    min-height: 100vh; /* Equivalent to Tailwind's min-h-screen */
-  }
+/* In your global CSS (index.css or tailwind base) */
+
   
