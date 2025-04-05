@@ -87,6 +87,7 @@ const EducationPage = () => {
           className="title-section"
         >
           <h1 className="title">Education Journey</h1>
+          <div className="education-divider"></div>
           <p className="subtitle">
             My academic background and continuous learning path that shapes my professional expertise.
           </p>
@@ -105,7 +106,7 @@ const EducationPage = () => {
               variants={itemVariants}
               className={`timeline-item ${index !== educationData.length - 1 ? "bordered" : ""}`}
             >
-              <div className="timeline-icon">{item.icon}</div>
+              <div className="timeline-icon ">{item.icon}</div>
 
               <div className="timeline-content">
                 <div className="timeline-header">
@@ -126,38 +127,6 @@ const EducationPage = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="skills-section"
-        >
-          <h2 className="skills-title">Skills Acquired</h2>
-
-          <div className="skills-list">
-            {[
-              "JavaScript",
-              "React",
-              "Node.js",
-              "TypeScript",
-              "Next.js",
-              "CSS/SCSS",
-              "Git",
-              "Data Structures",
-              "Algorithms",
-              "UI/UX Design",
-            ].map((skill) => (
-              <motion.div
-                key={skill}
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(79, 70, 229, 0.2)" }}
-                className="skill-item"
-              >
-                {skill}
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
       </div>
     </div>
