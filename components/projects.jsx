@@ -67,6 +67,7 @@ export default function Projects() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="section-title">My Projects</h2>
+            <div className="project-divider"></div>
             <p className="loading-text">Loading projects...</p>
           </div>
         </div>
@@ -93,7 +94,8 @@ export default function Projects() {
 
       <div className="container relative z-10">
         <div className="text-center mb-12">
-          <h2 className="section-title">My Projects</h2>
+          <h2 className="section-title ">My Projects</h2>
+          <div className="project-divider"></div>
           <div className="section-divider" />
           <p className="section-description">
             Here are some of the projects I've worked on. Each project represents different skills and technologies I've mastered.
