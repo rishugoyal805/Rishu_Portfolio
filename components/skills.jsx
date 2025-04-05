@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Code, Database, Globe, Layout, Server, Smartphone } from "lucide-react"
 import "./skills.css"
-
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false)
 
@@ -107,7 +106,7 @@ export default function Skills() {
 
       <div className="skills-container">
         <div className="skills-header">
-          <h2 className="skills-title">My Skills</h2>
+          <h2 className="skills-title ab">My Skills</h2>
           <div className="skills-divider"></div>
           <p className="skills-description">
             I have acquired a diverse range of skills throughout my career. Here are some of the technologies and tools
@@ -119,7 +118,7 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="skills-card"
+              className="skills-card ab"
             >
               <CardContent className="skills-card-content">
                 <div className="skills-card-header">
@@ -131,8 +130,8 @@ export default function Skills() {
                 <div className="skills-list">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skillIndex}>
-                      <div className="skills-skill-header">
-                        <span className="skills-name">{skill.name}</span>
+                      <div className="skills-skill-header ab">
+                        <span className="skills-name ab">{skill.name}</span>
                         <span className="skills-level">{skill.level}%</span>
                       </div>
                       <div className="skills-bar-bg">
