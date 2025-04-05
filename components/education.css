@@ -1,10 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  :root{
+    --education-back:white;
+    --background-new:white;
+  }
+  .dark{
+    --background-new:#111827;
+    --education-back:#1F2937;;
+  }
+}
 .education-section {
   min-height: 100vh;
   /* background: linear-gradient(to bottom, #000, #1f2937); */
   color: white;
   padding-top: 6rem;
   padding-bottom: 4rem;
-  background-color: var(--background-new);
+  background-color: var(--education-back);
 }
 
 .container {
@@ -87,7 +101,8 @@
 }
 
 .timeline-content:hover {
-  background-color: rgba(31, 41, 55, 0.8);
+  background-color: rgba(37, 49, 67, 0.8);
+  /* border: 2px white; */
   box-shadow: 5px 15px 25px -5px rgba(0, 0, 0, 0.7);
 }
 
