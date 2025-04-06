@@ -107,7 +107,7 @@ export default function Projects() {
             <Button
               key={category.id}
               variant={filter === category.id ? "default" : "outline"}
-              className={`rounded-full ${filter === category.id ? "" : "hover-button"}`}
+              className={`button-css rounded-full ${filter === category.id ? "" : "hover-button"}`}
               onClick={() => setFilter(category.id)}
             >
               {category.label}
