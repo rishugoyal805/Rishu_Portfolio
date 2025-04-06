@@ -4,7 +4,7 @@
 
 @layer base{
   :root{
-    --about-back:white;
+    --about-back:#F9FAFB;
     --dot-time:#2563EB;
   }
   .dark{
@@ -23,8 +23,18 @@
   transition: transform 0.5s;
   z-index: 0;
 }
+.bg-grid-pattern {
+  background-image: var(--about-back);
+  background-size: 20px 20px;
+}
+.image-css{
+  height: 63dvh;
+}
 .ab{
   color: var(--text);
+}
+.group{
+  justify-self: center;
 }
 .group:hover .about-image-bg {
   transform: scale(1.05);
@@ -80,17 +90,24 @@
   display: inline-block;
   margin-bottom: 8px; /* mb-2 */
 }
-
+/* 
 @media (min-width: 768px) {
   .timeline-dot {
     left: 50.15%;
     transform: translateX(-10px);
   }
-}
+} */
 @media (max-width: 768px) {
   .timeline-dot {
     left: 0%;
     transform: translateX(-10px);
+  }
+  .group {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:5rem;
+    display: none;
+    opacity: 0;
   }
 }
 @media (max-width: 560px) {
