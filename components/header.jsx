@@ -17,7 +17,8 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10)
 
       const sections = document.querySelectorAll("section[id]")
-      const scrollPosition = window.scrollY + 100
+      // const scrollPosition = window.scrollY + 100
+      const scrollPosition = window.scrollY + window.innerHeight / 2
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop
@@ -94,7 +95,7 @@ export default function Header() {
             </Link>
           ))}
           <div className="ml-2">
-            <ThemeToggle />
+            <ThemeToggle className="icon-size"/>
           </div>
         </nav>
 
