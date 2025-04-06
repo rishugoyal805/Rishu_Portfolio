@@ -86,7 +86,7 @@ export default function Contact() {
               <Card key={index} className="h-full ct-h-full">
                 <CardContent className="info-card ct-info-card">
                   <div className="icon-wrapper ct-icon-wrapper">
-                    <info.icon className="icon ct-icon" />
+                    <info.icon className="icon ct-icon"/>
                   </div>
                   <div>
                     <h3 className="info-title ct-info-title">{info.title}</h3>
