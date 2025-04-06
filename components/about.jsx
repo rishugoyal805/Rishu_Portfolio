@@ -31,11 +31,11 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="group">
-            <div className="relative w-[90%] aspect-1 overflow-hidden rounded-lg shadow-lg">
+            <div className="relative w-[90%] h-[80%]aspect-1 overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/rishu.jpg"
+                src="/rishu1.jpg"
                 alt="About Rishu Goyal"
-                className="w-[100%] h-[90dvh] object-cover"
+                className="w-[100%] h-[90dvh] object-cover image-css"
               />
             </div>
 
