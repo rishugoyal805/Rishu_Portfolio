@@ -4,10 +4,12 @@
 
 @layer base{
   :root{
-    --skill-back:white;
+    --skill-back:rgb(228, 234, 242);
+    --cont-back:white;
   }
   .dark{
     --skill-back:#111827;
+    --cont-back:#000000;
   }
 }
 .skills-section {
@@ -15,6 +17,7 @@
   overflow: hidden;
   padding: 4rem 0;
   background-color: var(--skill-back);
+  margin-top: 0%;
 }
 
 .skills-bg-pattern {
@@ -119,7 +122,7 @@
   border-top: 4px solid rgba(59, 130, 246, 0.7);
   /* primary/70 */
   transition: box-shadow 0.3s ease;
-  background-color: var(--gr-color);
+  background-color: var(--cont-back);
   border-radius: 0.5rem;
 }
 
@@ -127,7 +130,7 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.skills-card-content {
+.skills-card-content {  
   padding: 1.5rem;
 }
 
