@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  :root{
-    --contact-back:white;
-    --background-new:white;
-    --icon-back:#E9EFFC;
-    --icon:#E9EFFC
+@layer base {
+  :root {
+    --contact-back: #F9FAFB;
+    --new-con: white;
+    --tex: grey;
+    --icon-back: #8aa5de;
+    --icon-col: #3B82F6;
+
   }
-  .dark{
-    --background-new:#111827;
-    --contact-back:#1F2937;;
-    --icon-back:#08142E;
-    --icon:#3B82F6;
+
+  .dark {
+    --contact-back: #1F2937;
+    --new-con: black;
+    --tex: grey;
+    --icon-back: #08142E;
+    --icon-col: #3B82F6;
   }
 }
+
 input,
 textarea {
   width: 100%;
@@ -24,6 +29,10 @@ textarea {
   border-radius: 0.5rem;
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+  height: 4rem;
 }
 
 input:focus,
@@ -70,11 +79,11 @@ button[type="submit"]:disabled {
 }
 
 .ct-container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
   display: flex;
-  flex-direction: column; /* default for mobile */
-  gap: 2rem;
+  flex-direction: row;
+  gap: 10vw;
+  margin-top: 1rem;
 }
 
 .contact-divider {
@@ -98,6 +107,7 @@ button[type="submit"]:disabled {
 }
 
 .ct-contact-grid {
+  width: 800px;
   gap: 2rem;
 }
 
@@ -105,34 +115,44 @@ button[type="submit"]:disabled {
   color: var(--text);
 }
 
+.ct-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  /* margin-top: 1rem; */
+}
+
 .ct-info-card {
+  background: var(--new-con);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   text-align: center;
-  width:300px;
+  width: 300px;
 }
 
 .ct-icon-wrapper {
-  background-color: var(--icon-back);
+  background: var(--icon-back);
   padding: 0.75rem;
   border-radius: 9999px;
 }
 
 .ct-icon {
+  color: var(--icon-col);
   height: 1.5rem;
   width: 1.5rem;
   color: black
 }
 
 .ct-info-title {
+  color: var(--text);
   font-weight: 600;
 }
 
 .ct-info-link {
-  color: var(--gray-600);
+  color: var(--tex);
   transition: color 0.3s;
 }
 
@@ -143,13 +163,14 @@ button[type="submit"]:disabled {
 .ct-form-card {
   padding: 1rem;
   animation: slideIn 0.6s ease-in-out;
-  background: var(--tex);
+  background: var(--new-con);
   border-radius: 0.75rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .ct-form-row {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -160,46 +181,78 @@ button[type="submit"]:disabled {
   margin-right: 0.5rem;
 }
 
-@media (min-width: 1024px) {
-  .ct-container {
-    flex-direction: row; /* for larger screens, side by side */
-    align-items: flex-start;
-  }
-
+@media(max-width:1024px) {
   .ct-info-cards {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 50px;
   }
+
+  textarea {
+    height: 5rem;
+  }
+
+  .ct-info-card {
+    width: 30vw;
+  }
+}
+
+@media(max-width:800px) {
   .ct-info-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: none;
   }
 
-  .ct-contact-grid {
-    grid-template-columns: 1fr 2fr;
-    flex: 2;
+  .ct-form-card {
+    width: 80vw;
   }
 }
-
-@media (min-width: 640px) {
-  .ct-form-row {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
+/* Small devices - Mobile (≤639px) */
 @media (max-width: 639px) {
+  .ct-section-title {
+    text-align: center;
+  }
+
+  .ct-section-description {
+    text-align: center;
+    /* padding: 0 1rem; Prevents edge overflow */
+  }
+
   .ct-form-row {
     grid-template-columns: 1fr;
   }
 
   .ct-info-cards {
+    display: none;
+  }
+
+  .ct-info-card {
+    width: 100%;
+  }
+
+  .ct-container {
+    padding: 0 ;/* Consistent horizontal padding */
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0rem; /* Prevents unexpected spacing */
+    margin: 0 auto;
+  }
+
+  .section.contact-section {
     grid-template-columns: 1fr;
+    /* padding: 2rem 1rem; */
+  }
+
+  .ct-form-card {
+    padding: 1rem;
+  }
+  .container.ct-container{
+    padding-left: 0px;
   }
 }
-
 
 @keyframes slideIn {
   from {
