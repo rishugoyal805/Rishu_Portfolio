@@ -77,7 +77,7 @@ export default function Hero() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-10 h-10 flex items-center justify-center rounded-full"
+                  className="w-10 h-10 flex items-center justify-center rounded-full symbol"
                   asChild
                 >
                   <Link
@@ -92,7 +92,7 @@ export default function Hero() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-10 h-10 flex items-center justify-center rounded-full"
+                  className="w-10 h-10 flex items-center justify-center rounded-full symbol"
                   asChild
                 >
                   <Link
@@ -107,7 +107,7 @@ export default function Hero() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="w-10 h-10 flex items-center justify-center rounded-full"
+                  className="w-10 h-10 flex items-center justify-center rounded-full symbol"
                   asChild
                 >
                   <Link
@@ -127,7 +127,7 @@ export default function Hero() {
               <div className="hero-glow"></div>
               <div className="hero-image-container">
                 <img
-                  src="/rishu.jpg?height=350&width=350"
+                  src="/rishu.png?height=350&width=350"
                   alt="Rishu Goyal"
                   className="hero-image"
                 />
