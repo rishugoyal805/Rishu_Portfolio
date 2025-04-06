@@ -46,9 +46,9 @@ const EducationPage = () => {
       id: 1,
       degree: "Bachelor of Technology",
       field: "Computer Science and Engineering",
-      institution: "Indian Institute of Technology",
-      location: "Delhi, India",
-      duration: "2019 - 2023",
+      institution: "Jaypee Institute of Information Technology",
+      location: "Noida, UP, India",
+      duration: "201 - 2023",
       description:
         "Focused on algorithms, data structures, and web development. Participated in various hackathons and coding competitions.",
       icon: <GraduationCap className="icon" />,
@@ -78,7 +78,7 @@ const EducationPage = () => {
   ]
 
   return (
-    <div id="education" className="education-section">
+    <section id="education" className="education-section">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -129,7 +129,7 @@ const EducationPage = () => {
           ))}
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 }
 
