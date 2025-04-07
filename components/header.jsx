@@ -59,7 +59,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll)
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.removeEventListener("click", () => {})
+        anchor.removeEventListener("click", () => { })
       })
     }
   }, [])
@@ -95,15 +95,25 @@ export default function Header() {
             </Link>
           ))}
           <div className="ml-2">
-            <ThemeToggle className="icon-size"/>
+            {/* <ThemeToggle className="icon-size w-[40px] h-[40px] flex items-center justify-center" /> */}
+            <ThemeToggle className="w-[40px] h-[40px] flex items-center justify-center bg-transparent rounded-md" />
+
           </div>
+
         </nav>
 
         <div className="nav-mobile-toggle">
-          <ThemeToggle />
-          <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu" className="relative z-50">
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <div className="ml-2 flexi">
+            {/* <ThemeToggle className="icon-size w-[40px] h-[40px] flex items-center justify-center" /> */}
+            <ThemeToggle className="w-[40px] h-[40px] flex items-center justify-center bg-transparent rounded-md" />
+            <Button
+              size="icon"
+              onClick={toggleMenu}
+              className="relative z-50 w-[40px] nobag bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent shadow-none burger"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {isMenuOpen && (
