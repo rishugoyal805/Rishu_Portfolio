@@ -20,7 +20,6 @@ export default function Projects() {
         if (!response.ok) {
           throw new Error('Failed to fetch projects')
         }
-
         const repos = await response.json()
 
         const formattedProjects = repos.map((repo) => ({
@@ -132,21 +131,41 @@ export default function Projects() {
                 />
                 <div className="project-overlay">
                   <div className="project-buttons">
-                    <Button variant="secondary" size="sm" asChild>
+                    <Button className="code-button" variant="secondary" size="sm" asChild>
                       <Link href={project.githubLink} target="_blank">
                         <Github className="icon" /> Code
                       </Link>
                     </Button>
-                    <Button size="sm" asChild>
-                      <Link
-                        href={project.title === "Jaypee_Learning_Hub"
-                          ? "https://jaypeelearninghub.great-site.net"
-                          : project.liveLink}
-                        target="_blank"
-                      >
-                        <ExternalLink className="icon" /> Demo
-                      </Link>
-                    </Button>
+                    {project.title === "Jaypee_Learning_Hub" && (
+                      <Button className="code-button abc" size="sm" asChild>
+                        <Link
+                          href="https://jaypeelearninghub.great-site.net"
+                          target="_blank"
+                        >
+                          <ExternalLink className="icon" /> Demo
+                        </Link>
+                      </Button>
+                    )}
+                    {project.title === "Askmedia" && (
+                      <Button className="code-button abc" size="sm" asChild>
+                        <Link
+                          href="https://askdemiaa.vercel.app"
+                          target="_blank"
+                        >
+                          <ExternalLink className="icon" /> Demo
+                        </Link>
+                      </Button>
+                    )}
+                    {project.title === "Rishu_Portfolio" && (
+                      <Button className="code-button abc" size="sm" asChild>
+                        <Link
+                          href="https://rishugoyal.vercel.app"
+                          target="_blank"
+                        >
+                          <ExternalLink className="icon" /> Demo
+                        </Link>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
