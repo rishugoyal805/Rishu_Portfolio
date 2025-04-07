@@ -73,7 +73,6 @@
   height: 1.25rem;
   border-radius:50%;
   background-color: var(--dot-time);
-  left:3px;
   transform: translateX(-50%);
 }
 
