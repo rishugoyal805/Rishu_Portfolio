@@ -35,20 +35,20 @@ export default function Skills() {
         { name: "Next.js", level: 85 },
         { name: "HTML5/CSS3", level: 95 },
         { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "Tailwind CSS", level: 90 },
+        { name: "TypeScript", level: 70 },
+        { name: "Tailwind CSS", level: 75 },
       ],
     },
     {
       title: "Backend Development",
       icon: Server,
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "MongoDB", level: 75 },
+        { name: "Node.js", level: 80 },
+        { name: "Express", level: 70 },
+        { name: "MongoDB", level: 85 },
         { name: "PostgreSQL", level: 70 },
-        { name: "RESTful APIs", level: 90 },
-        { name: "GraphQL", level: 75 },
+        { name: "RESTful APIs", level: 80 },
+        // { name: "GraphQL", level: 75 },
       ],
     },
     {
@@ -64,11 +64,11 @@ export default function Skills() {
       title: "Database",
       icon: Database,
       skills: [
-        { name: "MongoDB", level: 80 },
-        { name: "PostgreSQL", level: 75 },
-        { name: "MySQL", level: 70 },
-        { name: "Firebase", level: 85 },
-        { name: "Redis", level: 65 },
+        { name: "MongoDB", level: 85 },
+        { name: "PostgreSQL", level: 70 },
+        { name: "MySQL", level: 95 },
+        { name: "Firebase", level: 80 },
+        { name: "Redis", level: 70 },
       ],
     },
     {
@@ -76,10 +76,10 @@ export default function Skills() {
       icon: Code,
       skills: [
         { name: "JavaScript", level: 95 },
-        { name: "TypeScript", level: 85 },
-        { name: "Python", level: 70 },
+        { name: "TypeScript", level: 80 },
+        { name: "Python", level: 85 },
         { name: "Java", level: 60 },
-        { name: "C++", level: 50 },
+        { name: "C++", level: 85 },
       ],
     },
     {
@@ -132,7 +132,7 @@ export default function Skills() {
                     <div key={skillIndex}>
                       <div className="skills-skill-header ab">
                         <span className="skills-name ab">{skill.name}</span>
-                        <span className="skills-level">{skill.level}%</span>
+                        {/* <span className="skills-level">{skill.level}%</span> */}
                       </div>
                       <div className="skills-bar-bg">
                         <div
