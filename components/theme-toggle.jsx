@@ -31,10 +31,10 @@ export default function ThemeToggle() {
       className="toggle-button"
     >
       <Sun
-        className={`icon-size transition-all sun-icon ${theme === "dark" ? "show" : "hide"}`}
+        className={`icon-size transition-all  sun-icon ${theme === "dark" ? "show" : "hide"}`}
       />
       <Moon
-        className={`icon-size transition-all moon-icon ${theme === "dark" ? "hide" : "show"}`}
+        className={`icon-size transition-all  moon-icon ${theme === "dark" ? "hide" : "show"}`}
       />
       <span className="sr-only">Toggle theme</span>
     </Button>
