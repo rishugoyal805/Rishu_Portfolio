@@ -14,7 +14,7 @@
 
   .dark {
     --contact-back: #1F2937;
-    --new-con: black;
+    --new-con: #020817;
     --tex: grey;
     --icon-back: #08142E;
     --icon-col: #3B82F6;
@@ -166,6 +166,8 @@ button[type="submit"]:disabled {
   background: var(--new-con);
   border-radius: 0.75rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  width:100%;
+  border: 1px grey;
 }
 
 .ct-form-row {
@@ -198,7 +200,7 @@ button[type="submit"]:disabled {
   }
 }
 
-@media(max-width:800px) {
+@media(max-width:850px) {
   .ct-info-cards {
     display: none;
   }
