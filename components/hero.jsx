@@ -60,7 +60,8 @@ export default function Hero() {
             <p className="hero-description">
               I craft scalable, efficient, and user-friendly digital experiences. Passionate about blending functionality with aesthetics to build impactful solutions.
             </p>
-            <div className="flex flex-wrap items-center gap-4 text-gray-500">
+            <div className="flex flex-wrap items-center gap-4 text-gray-500 pb-6">
+
               <Button asChild size="lg" className="px-6 py-3 round-bot">
                 <Link href="#contact" className="text-white">
                   Contact Me <ArrowRight className="ml-2 h-4 w-4" />
@@ -73,7 +74,7 @@ export default function Hero() {
                 </Link>
               </Button>
 
-              <div className="flex items-center gap-2 ml-2">
+              <div className="flex items-center justify-center gap-2 text-xs small ">
                 <Button
                   variant="outline"
                   size="icon"
@@ -118,9 +119,7 @@ export default function Hero() {
                   </Link>
                 </Button>
               </div>
-
             </div>
-
           </div>
           <div className={`hero-image-wrapper ${isVisible ? "visible" : "hidden"}`}>
             <div className="relative">
