@@ -48,33 +48,36 @@ const EducationPage = () => {
       field: "Computer Science and Engineering",
       institution: "Jaypee Institute of Information Technology",
       location: "Noida, UP, India",
-      duration: "201 - 2023",
+      duration: "2023 - present",
       description:
-        "Focused on algorithms, data structures, and web development. Participated in various hackathons and coding competitions.",
+        " Focused on algorithms, data structures, and web development. Gained hands-on experience through real-world projects and contributed to tech communities and clubs.",
+      // description:
+      //   "Focused on algorithms, data structures, and web development. Gained hands-on experience through real-world projects, participated in hackathons and coding competitions, and actively contributed to tech communities and clubs.",
       icon: <GraduationCap className="icon" />,
     },
     {
       id: 2,
       degree: "Higher Secondary Education",
-      field: "Science and Mathematics",
-      institution: "Delhi Public School",
-      location: "Delhi, India",
-      duration: "2017 - 2019",
+      field: "Physics, Chemistry, Mathematics (PCM)",
+      institution: "Bal Bharti Vidya Peeth, Baroda Road, Gohana",
+      location: "Sonipat, Haryana, India",
+      duration: "2022",
       description:
-        "Achieved excellence in mathematics and physics, laying a strong foundation for engineering studies.",
+        "Studied core science subjects with a strong emphasis on Physics, Chemistry, and Mathematics, forming a solid base for engineering education.",
       icon: <BookOpen className="icon" />,
-    },
+    },    
     {
       id: 3,
-      degree: "Certification",
-      field: "Full Stack Web Development",
-      institution: "Udemy",
-      location: "Online",
+      degree: "Secondary Education",
+      field: "General Curriculum",
+      institution: "Bal Bharti Vidya Peeth, Baroda Road, Gohana",
+      location: "Sonipat, Haryana, India",
       duration: "2020",
       description:
-        "Comprehensive course covering modern web technologies including React, Node.js, and database management.",
-      icon: <Award className="icon" />,
-    },
+        "Completed 10th grade with a strong academic foundation across core subjects including Mathematics, Science, and English.",
+      // icon: <Award className="icon" />,
+      icon: <BookOpen className="icon" />,
+    },    
   ]
 
   return (
