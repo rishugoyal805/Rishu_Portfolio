@@ -8,8 +8,12 @@
     --button-back: white;
     --button-hover-back:rgb(65, 115, 190);
     --button-tex:#2f3f60;
+    --project-text:white;
+    --hover-color:#D9DCDF;   
   }
   .dark{
+    --project-text: black;
+    --hover-color:#313A48;
     --button-hover-back:#22324A;
     --button-back: black;
     --project-back:#111827;
@@ -192,6 +196,20 @@
   overflow: hidden;
   color: black;
   font-size: 14px;
+}
+
+.code-button{
+  background: var(--project-text);
+  color:var(--text);
+  padding:4px 10px;
+  border-radius: 10px;
+}
+.code-button:hover{
+  background: var(--hover-color);
+}
+
+.abc:hover{
+  background: blue;;
 }
 
 .tech-tags {
