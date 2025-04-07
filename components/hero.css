@@ -124,6 +124,11 @@
     font-size: 1.875rem;
   }
 }
+@media (max-width: 640px) {
+  .text-primary {
+    font-size: 2rem;
+  }
+}
 
 .hero-description {
   color: #4b5563;
