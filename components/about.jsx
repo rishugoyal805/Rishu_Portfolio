@@ -31,11 +31,11 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="group">
-            <div className="relative w-[90%] h-[80%]aspect-1 overflow-hidden rounded-lg shadow-lg">
+            <div className="relative w-[100%] h-[90%]aspect-1 overflow-hidden rounded-lg shadow-lg">
               <img
                 src="/rishu1.jpg"
                 alt="About Rishu Goyal"
-                className="w-[100%] h-[90dvh] object-cover image-css"
+                className="w-[100%] h-[70dvh] object-cover image-css"
               />
             </div>
 
@@ -84,7 +84,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <h3 className="text-2xl font-semibold mb-8 text-center dark:text-gray-300">My Journey</h3>
           <div className="relative">
             <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 transform md:translate-x-px"></div>
@@ -116,7 +116,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
