@@ -38,7 +38,7 @@ export default function Header() {
         const targetElement = document.querySelector(href)
         if (targetElement) {
           window.scrollTo({
-            top: targetElement.getBoundingClientRect().top + window.scrollY - 80,
+            top: targetElement.getBoundingClientRect().top + window.scrollY,
             behavior: "smooth",
           })
 
