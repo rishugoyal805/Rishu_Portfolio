@@ -156,6 +156,16 @@ export default function Projects() {
                         </Link>
                       </Button>
                     )}
+                    {project.title === "Askdemia" && (
+                      <Button className="code-button abc" size="sm" asChild>
+                        <Link
+                          href="https://askdemiaa.vercel.app"
+                          target="_blank"
+                        >
+                          <ExternalLink className="icon" /> Demo
+                        </Link>
+                      </Button>
+                    )}
                     {project.title === "Rishu_Portfolio" && (
                       <Button className="code-button abc" size="sm" asChild>
                         <Link
