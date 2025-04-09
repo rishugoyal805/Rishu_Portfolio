@@ -146,7 +146,7 @@ export default function Projects() {
                         </Link>
                       </Button>
                     )}
-                    {project.title === "Askmedia-Frontend" && (
+                    {project.title === "Askdemia-Frontend" && (
                       <Button className="code-button abc" size="sm" asChild>
                         <Link
                           href="https://askdemiaa.vercel.app"
