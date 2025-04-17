@@ -10,7 +10,7 @@ export default function Hero() {
   const [text, setText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const fullText = "🚀 Full Stack Developer";
+  const fullText = "Full Stack Developer";
 
   useEffect(() => {
     setIsVisible(true);
@@ -54,8 +54,7 @@ export default function Hero() {
               Hi, I&apos;m <span className="text-primary">Rishu Goyal</span>
             </h1>
             <h2 className="hero-subheading dark:text-gray-300 ab">
-              {text}
-              <span className="animate-blink">|</span>
+              🚀 {text}
             </h2>
             <p className="hero-description">
               I craft scalable, efficient, and user-friendly digital experiences. Passionate about blending functionality with aesthetics to build impactful solutions.
