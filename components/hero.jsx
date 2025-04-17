@@ -126,7 +126,7 @@ export default function Hero() {
               <div className="hero-glow"></div>
               <div className="hero-image-container">
                 <img
-                  src="/rishu.png?height=350&width=350"
+                  src="/rishu.jpg?height=350&width=350"
                   alt="Rishu Goyal"
                   className="hero-image"
                 />
