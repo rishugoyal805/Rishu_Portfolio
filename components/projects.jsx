@@ -44,20 +44,30 @@ export default function Projects() {
   }, [])
 
   const getCategoryFromRepo = (repo) => {
-    if (repo.topics?.includes('frontend')) return "frontend"
-    if (repo.topics?.includes('backend')) return "backend"
-    return "fullstack"
+    const categories = []
+
+    if (repo.topics?.includes('cpp')) categories.push("codecraft")
+    if (repo.topics?.includes('fullstack')) categories.push("fullstack")
+    if (repo.topics?.includes('python')) categories.push("pybrains")
+    // if (repo.topics?.includes('ui')) categories.push("uiuxmagic")
+
+    if (categories.length === 0) categories.push("fullstack") // fallback
+    return categories
   }
 
-  const filteredProjects = filter === "all"
-    ? projects
-    : projects.filter((project) => project.category === filter)
+
+
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.category.includes(filter))
+
 
   const categories = [
     { id: "all", label: "All Projects" },
-    { id: "frontend", label: "Frontend" },
-    { id: "backend", label: "Backend" },
+    { id: "pybrains", label: "PyBrains" },
     { id: "fullstack", label: "Full Stack" },
+    { id: "codecraft", label: "Code Craft" },
   ]
 
   if (loading) {
@@ -182,14 +192,19 @@ export default function Projects() {
               <CardContent className="project-content">
                 <div className="category-tag">{project.category}</div>
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="tech-tags">
+                <p className="project-description">
+                  {project.description.length > 100
+                    ? `${project.description.slice(0, 100)}...`
+                    : project.description}
+                </p>
+
+                {/* <div className="tech-tags">
                   {project.technologies.slice(0, 4).map((tech, techIndex) => (
                     <span key={techIndex} className="tech-tag">
                       {tech}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}
