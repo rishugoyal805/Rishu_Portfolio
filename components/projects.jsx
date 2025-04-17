@@ -7,6 +7,8 @@ import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 import "./project.css" // Import external CSS
 
+const HIDDEN_REPOS = ["rishugoyal805", "Rishu_Portfolio"]
+
 export default function Projects() {
   const [filter, setFilter] = useState("all")
   const [projects, setProjects] = useState([])
@@ -22,15 +24,18 @@ export default function Projects() {
         }
         const repos = await response.json()
 
-        const formattedProjects = repos.map((repo) => ({
-          title: repo.name,
-          description: repo.description || "No description provided",
-          image: `https://opengraph.githubassets.com/1/${repo.full_name}` || "/placeholder.svg",
-          technologies: repo.topics || [],
-          category: getCategoryFromRepo(repo),
-          liveLink: repo.homepage || `https://github.com/${repo.full_name}`,
-          githubLink: repo.html_url,
-        }))
+        const formattedProjects = repos
+          .filter(repo => !HIDDEN_REPOS.includes(repo.name))
+          .map((repo) => ({
+            title: repo.name,
+            description: repo.description || "No description provided",
+            image: `https://opengraph.githubassets.com/1/${repo.full_name}` || "/placeholder.svg",
+            technologies: repo.topics || [],
+            category: getCategoryFromRepo(repo),
+            liveLink: repo.homepage || `https://github.com/${repo.full_name}`,
+            githubLink: repo.html_url,
+          }))
+
 
         setProjects(formattedProjects)
       } catch (err) {
@@ -116,7 +121,7 @@ export default function Projects() {
             <Button
               key={category.id}
               variant={filter === category.id ? "default" : "outline"}
-              className={`button-css rounded-full ${filter === category.id ? "" : "hover-button"}`}
+              className={`button-css rounded-full ${filter === category.id ? "active-category" : "hover-button"}`}
               onClick={() => setFilter(category.id)}
             >
               {category.label}
