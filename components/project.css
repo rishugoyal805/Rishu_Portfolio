@@ -89,6 +89,12 @@
   color: var(--text);
 }
 
+.active-category {
+  color: white !important; /* Ensures it overrides default button styles */
+  background-color: #4f46e5 !important; /* Optional: Change background for better visibility */
+  border: none;
+}
+
 .hover-button:hover {
   background-color: rgba(59, 130, 246, 0.1);
   color: var(--text);
