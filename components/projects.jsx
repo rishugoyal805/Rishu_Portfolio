@@ -151,7 +151,7 @@ export default function Projects() {
                         <Github className="icon" /> Code
                       </Link>
                     </Button>
-                    {project.liveLink && project.liveLink !== `https://github.com/${project.title}` && (
+                    {project.liveLink && !project.liveLink.includes("github.com") && (
                       <Button className="code-button abc" size="sm" asChild>
                         <Link
                           href={project.liveLink}
