@@ -151,40 +151,10 @@ export default function Projects() {
                         <Github className="icon" /> Code
                       </Link>
                     </Button>
-                    {project.title === "Jaypee_Learning_Hub" && (
+                    {project.liveLink && project.liveLink !== `https://github.com/${project.title}` && (
                       <Button className="code-button abc" size="sm" asChild>
                         <Link
-                          href="https://jaypeelearninghub.great-site.net"
-                          target="_blank"
-                        >
-                          <ExternalLink className="icon" /> Demo
-                        </Link>
-                      </Button>
-                    )}
-                    {project.title === "Askdemia-Frontend" && (
-                      <Button className="code-button abc" size="sm" asChild>
-                        <Link
-                          href="https://askdemiaa.vercel.app"
-                          target="_blank"
-                        >
-                          <ExternalLink className="icon" /> Demo
-                        </Link>
-                      </Button>
-                    )}
-                    {project.title === "Askdemia" && (
-                      <Button className="code-button abc" size="sm" asChild>
-                        <Link
-                          href="https://askdemiaa.vercel.app"
-                          target="_blank"
-                        >
-                          <ExternalLink className="icon" /> Demo
-                        </Link>
-                      </Button>
-                    )}
-                    {project.title === "Rishu_Portfolio" && (
-                      <Button className="code-button abc" size="sm" asChild>
-                        <Link
-                          href="https://rishugoyal.vercel.app"
+                          href={project.liveLink}
                           target="_blank"
                         >
                           <ExternalLink className="icon" /> Demo
