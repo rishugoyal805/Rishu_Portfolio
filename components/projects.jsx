@@ -165,7 +165,14 @@ export default function Projects() {
                 </div>
               </div>
               <CardContent className="project-content">
-                <div className="category-tag">{project.category}</div>
+                {/* <div className="category-tag">{project.category}</div> */}
+                <div className="tech-tags">
+                  {project.technologies.slice(0, 4).map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">
                   {project.description.length > 100
