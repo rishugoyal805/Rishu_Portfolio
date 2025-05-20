@@ -15,11 +15,12 @@ const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+  website: "", // honeypot field
+});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -29,32 +30,39 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      const response = await emailjs.send(
-        serviceID,
-        templateID,
-        {
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        publicKey
-      );
+  // Honeypot check
+  if (formData.website) {
+    alert("Spam detected. Submission blocked.");
+    setIsSubmitting(false);
+    return;
+  }
 
-      console.log("Email sent successfully", response);
-      alert("Message Sent Successfully!");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      console.error("Error sending email", error);
-      alert("Failed to send message.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  try {
+    const response = await emailjs.send(
+      serviceID,
+      templateID,
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      publicKey
+    );
+
+    console.log("Email sent successfully", response);
+    alert("Message Sent Successfully!");
+    setFormData({ name: "", email: "", subject: "", message: "", website: "" });
+  } catch (error) {
+    console.error("Error sending email", error);
+    alert("Failed to send message.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const contactInfo = [
     {
@@ -117,6 +125,17 @@ export default function Contact() {
             <Card className="h-full ct-h-full">
               <CardContent className="form-card ct-form-card">
                 <form onSubmit={handleSubmit} className="space-y-4 ct-space-y-4">
+                  {/* Honeypot field */}
+<input
+  type="text"
+  name="website"
+  value={formData.website}
+  onChange={handleChange}
+  style={{ display: "none" }}
+  tabIndex={-1}
+  autoComplete="off"
+/>
+
                   <div className="form-row ct-form-row">
                     <div className="relative ct-relative">
                       <label htmlFor="name">Enter your full name</label>
