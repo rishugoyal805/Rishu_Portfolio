@@ -77,21 +77,9 @@ npm start
 
 ---
 
-## 👀 Screenshots
-
-_Add screenshots or gifs here_
-
----
-
 ## 📬 Contact
 
-Feel free to reach out via the [Contact section](#) or email: rishugoyal16800@gmail.com
-
----
-
-## 📄 License
-
-[MIT](LICENSE)
+Feel free to reach out via email: rishugoyal16800@gmail.com
 
 ---
 
