@@ -7,7 +7,7 @@ Showcasing my skills, projects, testimonials, and how to get in touch.
 
 ## 🌟 Features
 
-- **Modern Next.js App** — Fast, SEO-friendly, and responsive.
+- **Modern Next.js App** — Fast, SEO-friendly, and responsive. 
 - **Dark/Light Mode** — Seamless theme switching with `next-themes` & Tailwind CSS.
 - **Animated Skills Section** — Interactive progress bars for each skill.
 - **Comprehensive About Section** — My story, background, and highlights.
